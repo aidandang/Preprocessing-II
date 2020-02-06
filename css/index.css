@@ -1,13 +1,21 @@
 .btn {
   display: inline-block;
-  background-color: green;
-  border-radius: 6px;
+  background-color: teal;
+  border-radius: 10px;
   padding: 10px 20px;
 }
 .btn a {
   color: white;
   text-decoration: none;
   font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .btn {
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -147,6 +155,13 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+@media (max-width: 500px) {
+  html,
+  body {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
 h1,
 h2,
 h3,
@@ -214,6 +229,17 @@ header .navigation-section .navigator a {
   text-decoration: none;
   color: black;
 }
+@media (max-width: 500px) {
+  header .navigation-section {
+    flex-flow: column;
+  }
+  header .navigation-section .logo {
+    padding-bottom: 10px;
+  }
+  header .navigation-section .navigator {
+    width: 100%;
+  }
+}
 .banner {
   max-width: 800px;
   width: 100%;
@@ -221,7 +247,7 @@ header .navigation-section .navigator a {
   border-bottom: 2px dashed #C0C0C0;
   padding-bottom: 20px;
 }
-.banner .logo {
+.banner .banner-img {
   padding-bottom: 20px;
 }
 .home .content-section {
@@ -241,6 +267,20 @@ header .navigation-section .navigator a {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    width: 100%;
+    margin: 30px auto;
+    flex-flow: column;
+    align-items: center;
+  }
+  .home .content-section .text-content,
+  .home .content-section .img-content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
@@ -253,12 +293,30 @@ header .navigation-section .navigator a {
   padding-right: 1%;
   padding-left: 0;
 }
+@media (max-width: 500px) {
+  .home .inverse-content {
+    width: 100%;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  .home .inverse-content .text-content,
+  .home .inverse-content .img-content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .home .content-destination {
   width: 75%;
   margin: 0 auto 30px;
 }
 .home .content-destination img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
 }
 .home .content-pick {
   padding-top: 30px;
@@ -269,4 +327,15 @@ header .navigation-section .navigator a {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    width: 100%;
+    margin: 0 auto;
+    flex-flow: column;
+    align-items: center;
+  }
+  .home .content-pick .destination {
+    width: 90%;
+  }
 }

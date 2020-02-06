@@ -6,12 +6,18 @@
 
 .btn {
     display: inline-block;
-    background-color: green;
-    .btn-parameter(6px, 10px, 20px);
+    background-color: teal;
+    .btn-parameter(@border-radius, 10px, 20px);
 
     a {
         color: white;
         text-decoration: none;
         font-size: 1.6rem;
+    }
+
+    @media @mobile {
+        .btn-parameter(@border-radius, 10px, 0);
+        width: 100%;
+        text-align: center;
     }
 }
