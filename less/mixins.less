@@ -1,1 +1,23 @@
 // Mixins in here
+.btn-parameter(@radius, @v-padding, @h-padding) {
+    border-radius: @radius;
+    padding: @v-padding @h-padding;
+}
+
+.btn {
+    display: inline-block;
+    background-color: teal;
+    .btn-parameter(@border-radius, 10px, 20px);
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.6rem;
+    }
+
+    @media @mobile {
+        .btn-parameter(@border-radius, 10px, 0);
+        width: 100%;
+        text-align: center;
+    }
+}

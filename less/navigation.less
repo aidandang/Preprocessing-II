@@ -1,1 +1,37 @@
 // Navigation Styles here
+.navigation() {
+    .navigation-section {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .navigator {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+    
+            a {
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    
+    @media @mobile {
+        .navigation-section {
+            flex-flow: column;
+
+            .logo {
+                padding-bottom: 10px;
+              }
+
+            .navigator {
+                width: 100%;
+            }
+        }
+    }
+}
